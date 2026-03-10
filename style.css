@@ -255,7 +255,7 @@ a {
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   position: sticky;
-  top: 12%;
+  top: 23%;
   z-index: -1;
   box-shadow: 5px 5px #b2bfce;
   padding-bottom: 5%;
@@ -349,7 +349,7 @@ a {
 .textp {
   margin-top: 6%;
   color: rgb(255, 255, 255);
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .textabout {
@@ -1065,16 +1065,17 @@ a {
   flex-direction:column;
 }
 .texthelo{
-  font-size:9vw;
+  font-size:5.5vw;
   left: 4px;
   position: relative;
-  margin-left: 150px;
+  margin-left: 145px;
 }
 
 .textrandom{
-  font-size:5vw;
+  font-size:10px;
   margin-top: 4px;
-  /* margin-left: 200px; */
+  margin-left: 250px;
+  display: none;
 }
 .starimg,
 .starimg2{
@@ -1086,43 +1087,69 @@ a {
 }
 /* content 2 */
 .content2{
-  width: 90%;
+  width: 83%;
   margin-left: 5%;
 }
 .textim{
-  font-size: 30px;
+  font-size: 25px;
 }
 .nama{
-  font-size: 40px;
+  font-size: 30px;
+}
+.textp{
+    font-size: 13px;
 }
 
 /* content 3 */
 .content3{
   margin-left: 1.5%;
+  width: 96%;
 }
 .imggw{
-  width: 150px;
+  width: 100px;
   margin-right: 10px;
-  height: 150px;
+  height: 100px;
+  margin-top: 30px;
 }
 .textdes{
-  font-size: 14px;
+  font-size: 10px;
+}
+.textabout{
+    font-size: 20px;
+    margin-top: 50px;
+}
+.buttonseemyproject{
+    font-size: 13px;
 }
 
 /* content4 */
 .content4{
   margin-left: 1.5%;
+  width: 96%;
 }
 .services{
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 1px;
 }
 .garisskil{
-  margin-left: 90px;
+  margin-left: 70px;
+}
+.vertikal{
+    display: none;
+}
+.textmyskil{
+    font-size: 18px;
 }
 .skills{
-  margin-top: 100px;
-  width: 200px;
+  margin-top: 70px;
+  width: 10px;
+  margin-right: 10px;
+}
+.skill{
+    font-size: 10px;
+}
+.bar{
+    width: 200px;
 }
 .deskripsiskills{
   display: none;
@@ -1131,29 +1158,40 @@ a {
 /* divproject */
 .divproject{
   margin-left: 1.5%;
+  width: 96%;
 }
 .textproject{
-  font-size: 23px;
+  font-size: 15px;
 }
 .garisproject{
-  width: 15px;
-  height: 250px;
+  width: 10px;
+  height: 200px;
 }
 .card{
-  height: 150px;
+  height: 100px;
 }
 .divproject{
   height: 480px;
 }
 .btn-10{
   margin-right: 15px;
+  font-size: 13px;
+  height: 60px;
+  margin-top: 150px;
 }
+
+.card__title,.card__description,.card2:hover,.container:hover,.card svg:hover {
+    display: none;
+}
+
+
 
 /* div contact */
 .divcontact{
   display: flex;
   flex-direction: column;
   margin-left: 1.5%;
+  width: 96%;
 }
 .contactme{
   margin-top: 10%;
@@ -1169,6 +1207,7 @@ a {
 /* before footer */
 .beforefooter{
   margin-left: 1.5%;
+  width: 96%;
 }
 .logogw{
   width: 45px;
@@ -1180,6 +1219,7 @@ a {
 .footer{
   padding-top: 40px;
   margin-left: 1.5%;
+  width: 96%;
 }
 
 

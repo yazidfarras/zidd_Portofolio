@@ -63,10 +63,10 @@
 
         <div>
             <div class="textrandom">
-                <h2 class="typing"></h2>
+                <h2 id="changingText">안녕하세요</h2>
             </div>
         </div>
-
+    
     </div>
     <img src="/images/starpurple.svg" alt="" class="starimg2">
 
@@ -124,35 +124,35 @@
             <h2 class="textmyskil">My Skills</h2>
 
             <div class="skill">
-                <p>HTML</p>
+                <p class="phtml">HTML</p>
                 <div class="bar">
                     <div class="progress html"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <p>CSS</p>
+                <p class="pcss">CSS</p>
                 <div class="bar">
                     <div class="progress css"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <p>JavaScript</p>
+                <p class="pjs">JavaScript</p>
                 <div class="bar">
                     <div class="progress js"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <p>MySQL</p>
+                <p class="psql">MySQL</p>
                 <div class="bar">
                     <div class="progress mysql"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <p>Figma</p>
+                <p class="pfigma">Figma</p>
                 <div class="bar">
                     <div class="progress figma"></div>
                 </div>
@@ -280,6 +280,29 @@
     </div>
 
 <script src="index.js"></script>
+<script>
+    const texts = [
+        "안녕하세요",
+        "Hello,everyone",
+        "السلام عليكم",
+        "こんにちは",
+        "Xin chào"
+    ];
+
+    const textElement = document.getElementById("changingText");
+    let index = 0;
+
+    setInterval(() => {
+        textElement.classList.add("fade");
+
+        setTimeout(() => {
+            index = (index + 1) % texts.length;
+            textElement.textContent = texts[index];
+            textElement.classList.remove("fade");
+        }, 500);
+
+    }, 2000);
+</script>
 </body>
 
 </html>

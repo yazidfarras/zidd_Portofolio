@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zidd | Portofolio</title>
+    <title>Portofolio yazid</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/images/Group 4 (2).png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+ 
 
 <body>
 
@@ -63,10 +64,10 @@
 
         <div>
             <div class="textrandom">
-                <h2 id="changingText">안녕하세요</h2>
+                <h2 class="typing"></h2>
             </div>
         </div>
-    
+
     </div>
     <img src="/images/starpurple.svg" alt="" class="starimg2">
 
@@ -78,15 +79,14 @@
             <div>
                 <h2 class="nama"> Yazid Farras Fadillah</h2>
             </div>
-            <div class="textp">
-                <h4>UI & UX Front End Developer </h4>
-            </div>
+            
         </div>
     </div>
 
 
     <div id="about" class="content3">
-
+    
+        <div class="divimg"><img src="/images/bebek.jpeg" alt="yazid" class="imggw"></div>
 
         <div class="divcolum">
             <div>
@@ -109,50 +109,50 @@
 
         </div>
 
-        <div class="divimg"><img src="/images/foto bebek.jpeg" alt="yazid" class="imggw"></div>
+        
 
     </div>
 
     <div id="skills" class="content4">
         <div class="services">
-            <h4>what I have <br> learned</h4>
+            <div><h4>what I have <br> learned</h4></div>
             <div class="garisskil"></div>
         </div>
 
 
         <section class="skills">
-            <h2 class="textmyskil">My Skills</h2>
+            <h2>My Skills</h2>
 
             <div class="skill">
-                <p class="phtml">HTML</p>
+                <p>HTML</p>
                 <div class="bar">
                     <div class="progress html"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <p class="pcss">CSS</p>
+                <p>CSS</p>
                 <div class="bar">
                     <div class="progress css"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <p class="pjs">JavaScript</p>
+                <p>JavaScript</p>
                 <div class="bar">
                     <div class="progress js"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <p class="psql">MySQL</p>
+                <p>MySQL</p>
                 <div class="bar">
                     <div class="progress mysql"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <p class="pfigma">Figma</p>
+                <p>Figma</p>
                 <div class="bar">
                     <div class="progress figma"></div>
                 </div>
@@ -162,7 +162,9 @@
             <h4>
                 I am passionate about building meaningful and functional digital experiences.<br> I continuously improve
                 my
-                skills in technology step by step. 
+                skills in technology step by step. As a web developer <br> and UI/UX enthusiast, I create responsive
+                websites
+                databases.
             </h4>
         </div>
         <div class="vertikal"></div>
@@ -172,7 +174,8 @@
     <div id="project" class="divproject">
         <h1 id="project" class="textproject">Project</h1>
         <div class="garisproject"></div>
-
+       <!-- <h5 class="full">full </h5> -->
+        <div class="card-container">
         <div class="card">
             <svg width="2129" height="2655" viewBox="0 0 2129 2655" fill="none" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -194,11 +197,10 @@
 
             </div>
         </div>
+        
 
-
-
-
-        <div class="card">
+        
+        <div class="card2">
             <svg width="1286" height="1472" viewBox="0 0 1286 1472" fill="none" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="1286" height="1472" fill="url(#pattern0_171_8)" />
@@ -211,11 +213,12 @@
                 </defs>
             </svg>
 
-            <div class="card__content">
-                <p class="card__title">My Logo</p>
-                <p class="card__description">Perpaduan warna biru muda dan putih berbentuk huruf Z dan blok vector yang
+            <div class="card2__content">
+                <p class="card2__title">My Logo</p>
+                <p class="card2__description">Perpaduan warna biru muda dan putih berbentuk huruf Z dan blok vector yang
                     menggambarkan netral dan lembut.</p>
             </div>
+        </div>
         </div>
         <a href="project.html" class="btn-10"> See All Project
         </a>
@@ -227,7 +230,7 @@
 
 
     <div id="contact" class="divcontact">
-        <h3 class="textcontact">ontact</h3>
+        <h3 class="textcontact">Contact</h3>
         <div class="gariscontact"></div>
         <form class="form">
             <div class="title">Contact us</div>
@@ -280,29 +283,6 @@
     </div>
 
 <script src="index.js"></script>
-<script>
-    const texts = [
-        "안녕하세요",
-        "Hello,everyone",
-        "السلام عليكم",
-        "こんにちは",
-        "Xin chào"
-    ];
-
-    const textElement = document.getElementById("changingText");
-    let index = 0;
-
-    setInterval(() => {
-        textElement.classList.add("fade");
-
-        setTimeout(() => {
-            index = (index + 1) % texts.length;
-            textElement.textContent = texts[index];
-            textElement.classList.remove("fade");
-        }, 500);
-
-    }, 2000);
-</script>
 </body>
 
 </html>

@@ -57,7 +57,7 @@ a {
   position: relative;
   width: 26.5%;
   height: 60px;
-  margin-left: 65%;
+  margin-left: 70%;
   margin-top: 1px;
   position: sticky;
   top: 3.5%;
@@ -124,7 +124,6 @@ a {
   margin-top: 1.5%;
   margin-left: 2%;
   position: fixed;
-  z-index: 9999;
 }
 
 .content1 {
@@ -156,29 +155,71 @@ a {
 
 .textrandom {
   color: #a4c6f2;
-  font-size: 15px;
- margin-top: 9rem;
+  font-size: 35px;
+  margin-top: 9rem;
   margin-left: 24rem;
 }
-/* ====== text changing ====== */
-.textrandom h2 {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    margin: 0;
-}
-.textrandom{
-    height: 40px;
-    display: flex;
-    align-items: center;
+.typing {
+  font-size: 28px;
+  font-weight: bold;
+  border-right: 3px solid #a4c6f2;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 30s steps(30) infinite;
 }
 
-
-.slide-out {
-    transform: translateY(-20px);
-    opacity: 0;
+.typing::before {
+  content: "안녕하세요";
+  animation: changeText 32s infinite;
 }
-.fade {
-    opacity: 0;
-    transition: opacity 2s ease;
+
+/* Animasi Ketik */
+@keyframes typing {
+
+  /* Korea */
+  0%   { width: 0; }
+  10%  { width: 9ch; }
+  20%  { width: 9ch; }
+  25%  { width: 0; }
+
+  /* Jepang */
+  30%  { width: 0; }
+  40%  { width: 9ch; }
+  50%  { width: 9ch; }
+  55%  { width: 0; }
+
+  /* China */
+  60%  { width: 0; }
+  70%  { width: 7ch; }
+  80%  { width: 7ch; }
+  85%  { width: 0; }
+
+  /* thai */
+  90%  { width: 0; }
+  95%  { width: 9ch; }
+  100% { width: 9ch; }
+  110% { width: 0; }
+}
+
+/* Ganti Text */
+@keyframes changeText {
+
+  0%, 24% {
+    content: "안녕하세요";
+  }
+
+  25%, 54% {
+    content: "こんにちは";
+  }
+
+  55%, 84% {
+    content: "大 家 好";
+  }
+
+  85%, 100% {
+    content: "السلام عليكم";
+  }
 }
 /* garis garis */
 .garisproject{
@@ -214,7 +255,7 @@ a {
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   position: sticky;
-  top: 23%;
+  top: 12%;
   z-index: -1;
   box-shadow: 5px 5px #b2bfce;
   padding-bottom: 5%;
@@ -253,6 +294,7 @@ a {
   border-right: solid #a4c6f2;
   margin-left: 0.7%;
   margin-right: 0.7%;
+
 }
 .divcontact {
   background-color: #ffffff;
@@ -308,7 +350,7 @@ a {
 .textp {
   margin-top: 6%;
   color: rgb(255, 255, 255);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .textabout {
@@ -565,10 +607,14 @@ a {
 }
 
 /* From Uiverse.io by gharsh11032000 */
+.card-container{
+  display: flex;
+  
+}
 .card {
   position: relative;
-  width: 20%;
-  height: 35%;
+  width: 40%;
+  height: 40%;
   background-color: #ffffff;
   border-radius: 10px;
   display: flex;
@@ -578,14 +624,17 @@ a {
   perspective: 100%;
   box-shadow: 0 0 0 5px #ffffff80;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-top: 25%;
+  margin-top: 33%;
   margin-left: 5%;
   border: solid #a4c6f2;
+
+  
+  
   
 }
 
 .card svg {
-  width: 50%;
+  width: 30%;
   fill: #333;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -631,15 +680,11 @@ a {
   color: #000000;
   line-height: 1.4;
 }
-
-
-
-/* From Uiverse.io by gharsh11032000 */
 .card2 {
   position: relative;
-  width: 30%;
-  height: 20%;
-  background-color: #f2f2f2;
+  width: 40%;
+  height: 40%;
+  background-color: #ffffff;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -648,19 +693,24 @@ a {
   perspective: 100%;
   box-shadow: 0 0 0 5px #ffffff80;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-right: 8%;
-  margin-top: 8%;
+  margin-top: 33%;
+  margin-left: 5%;
+  border: solid #a4c6f2;
+
+  
+  
+  
 }
 
 .card2 svg {
-  width: 20%;
+  width: 30%;
   fill: #333;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card2:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 16px rgb(255, 255, 255);
 }
 
 .card2__content {
@@ -669,22 +719,23 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 5%;
+  padding: 8%;
   box-sizing: border-box;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 10px;
 }
 
-.card2:hover .card__content {
+.card2:hover .card2__content {
   transform: rotateX(0deg);
 }
 
 .card2__title {
   margin: 0;
-  font-size: 2rem;
-  color: #333;
+  font-size: 24px;
+  color: #a4c6f2;
   font-weight: 700;
 }
 
@@ -693,18 +744,23 @@ a {
 }
 
 .card2__description {
-  margin: 2% 0 0;
-  font-size: 1rem;
-  color: #777;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #000000;
   line-height: 1.4;
 }
+
+
+
+
+
 .textcontact{
   font-size: 2.5rem;
   margin-left: 6%;
   color: #a4c6f2;
 }
 .btn-10 {
-  padding: 11px 20px;
+  padding: 4px 20px;
   font-size: 15px;
   background: transparent;
   border: none;
@@ -713,7 +769,7 @@ a {
   z-index: 1;
   height: 7%;
   margin-top: 36.2%;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 .btn-10::after,
@@ -997,7 +1053,12 @@ a {
 /* ================= MOBILE ≤576px ================= */
 
 @media (max-width:576px){
-
+.custom-cursor{
+  display: none;
+}
+body{
+  cursor: auto;
+}
 .nav{
   width:95%;
   margin-left:2.5%;
@@ -1024,17 +1085,17 @@ a {
   flex-direction:column;
 }
 .texthelo{
-  font-size:5.5vw;
+  font-size:auto;
   left: 4px;
   position: relative;
-  margin-left: 145px;
+  margin-left: 150px;
 }
 
 .textrandom{
-  font-size:10px;
-  margin-top: 1px;
-  margin-left: 250px;
-  
+  font-size:5vw;
+  margin-top: 4px;
+  /* margin-left: 200px; */
+  display: none;
 }
 .starimg,
 .starimg2{
@@ -1046,117 +1107,116 @@ a {
 }
 /* content 2 */
 .content2{
-  width: 88%;
+  width: 90%;
   margin-left: 5%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 .textim{
-  font-size: 25px;
-}
-.nama{
   font-size: 30px;
 }
-.textp{
-    font-size: 13px;
+.nama{
+  font-size: 40px;
 }
 
 /* content 3 */
 .content3{
   margin-left: 1.5%;
-  width: 97%;
+  flex-direction: column;
 }
 .imggw{
-  width: 100px;
-  margin-right: 10px;
-  height: 100px;
-  margin-top: 30px;
+  width: 150px;
+  margin-left: 150px;
+  height: 150px;
+  margin-bottom: 5px;
 }
+
 .textdes{
-  font-size: 10px;
+  font-size: 15px;
+  margin-left: 10px;
 }
 .textabout{
-    font-size: 20px;
-    margin-top: 50px;
+  margin-left: 15px;
+  margin-top: 5px;
 }
 .buttonseemyproject{
-    font-size: 13px;
+  margin-left: 20px;
 }
 
 /* content4 */
 .content4{
   margin-left: 1.5%;
-  width: 97%;
 }
 .services{
-  font-size: 15px;
-  margin-top: 1px;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 .garisskil{
-  margin-left: 70px;
-}
-.vertikal{
-    display: none;
-}
-.textmyskil{
-    font-size: 18px;
+  margin-left: 90px;
+  display: none;
 }
 .skills{
-  margin-top: 70px;
-  width: 10px;
-  margin-right: 10px;
-  padding: auto;
+  margin-top: 100px;
+  width: 100px;
+  margin-right:50px;
 }
 .skill{
-    font-size: 10px;
-}
-.bar{
-    width: 200px;
+  width: 95%;
 }
 .deskripsiskills{
+  display: none;
+}
+.vertikal{
   display: none;
 }
 
 /* divproject */
 .divproject{
   margin-left: 1.5%;
-  width: 97%;
 }
 .textproject{
-  font-size: 15px;
+  font-size: auto;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 .garisproject{
-  width: 10px;
-  height: 200px;
+  width: 15px;
+  height: 250px;
+  display: none;
 }
-.card{
-  height: 100px;
+/* .card{
+  height: 150px;
+  margin-right: 20px;
+  margin-bottom: 3px;
+  
+}
+.card2{
+  height: 150px;
+  margin-right: 20px;
+  margin-bottom: 3px;
+  width: 89.5%;
+} */
+.card-container{
+  flex-direction: column;
 }
 .divproject{
   height: 480px;
 }
 .btn-10{
   margin-right: 15px;
-  font-size: 13px;
-  height: 60px;
-  margin-top: 150px;
 }
-
-.card__title,.card__description,.card2:hover,.container:hover,.card svg:hover {
-    font-size: 10px;
+.full{
+  margin-top:120px ;
+  color: #a4c6f2;
 }
-.phtml,.pcss,.pjs,.psql,.pfigma{
-    font-size: 10px;
+.btn-10{
+  display: none;
 }
-
-
 
 /* div contact */
 .divcontact{
   display: flex;
   flex-direction: column;
   margin-left: 1.5%;
-  width: 97%;
 }
 .contactme{
   margin-top: 10%;
@@ -1168,21 +1228,16 @@ a {
 .gariscontact{
   display: none;
 }
-.form{
-    padding: 20px;
-}
+
+
 
 /* before footer */
 .beforefooter{
   margin-left: 1.5%;
-  width: 97%;
 }
 .logogw{
   width: 45px;
   margin-top: 45px;
-}
-.logokodein{
-    width: 60px;
 }
 
 
@@ -1190,7 +1245,6 @@ a {
 .footer{
   padding-top: 40px;
   margin-left: 1.5%;
-  width: 97%;
 }
 
 
@@ -1201,13 +1255,20 @@ a {
 }
 
 .card{
-  width:90%;
+  width:50%;
   margin-left:5%;
+  height:150px;
+  
+}
+.card2{
+  height: 150px;
+  width: 50%;
+  margin-top:10px;
 }
 
 .form{
-  width:90%;
-  margin-left:5%;
+  width:80%;
+  margin-left:7%;
 }
 
 .textcontact{

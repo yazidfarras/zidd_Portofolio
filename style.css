@@ -1049,247 +1049,397 @@ a {
     transform: translateY(0);
   }
 }
+.job{
+  color: #fff;
+}
+
+/* INTRO FULLSCREEN */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #a4c6f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  animation: hideIntro 1s ease 3s forwards;
+}
+
+/* LOGO ANIMATION */
+.logo-intro {
+  width: 120px;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: zoomIn 2s ease forwards;
+}
+
+/* ZOOM IN */
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* INTRO HILANG */
+@keyframes hideIntro {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* MAIN CONTENT */
+#main-content {
+  opacity: 0;
+  animation: showContent 1s ease 3s forwards;
+}
+
+/* MUNCULKAN WEBSITE */
+@keyframes showContent {
+  to {
+    opacity: 1;
+  }
+}
 
 /* ================= MOBILE ≤576px ================= */
 
-@media (max-width:576px){
-.custom-cursor{
-  display: none;
-}
-body{
-  cursor: auto;
-}
-.nav{
-  width:95%;
-  margin-left:2.5%;
-  display: none;
-}
+@media (max-width: 576px) {
+  /* Basic Setup */
+  .custom-cursor {
+    display: none;
+  }
 
-.container{
-  flex-direction:column;
-}
+  body {
+    cursor: auto;
+  }
 
-.btn{
-  font-size:0.9rem;
-}
+  .logo {
+    width: 10%;
+    top: 1px;
+    left: 2px;
+    position: fixed;
+  }
 
-.logo{
-  width:10%;
-  top: 1px;
-  left: 2px;
-  position: fixed;
-}
-/* CONTENT1 */
-.content1{
-  margin-top:20%;
-  flex-direction:column;
-}
-.texthelo{
-  font-size:auto;
-  left: 4px;
-  position: relative;
-  margin-left: 150px;
-}
+  /* Navigation */
+  .nav {
+    display: none;
+  }
 
-.textrandom{
-  font-size:5vw;
-  margin-top: 4px;
-  /* margin-left: 200px; */
-  display: none;
-}
-.starimg,
-.starimg2{
-  width:35%;
-  display: none;
-}
-.typing{
-  font-size:5vw;
-}
-/* content 2 */
-.content2{
-  width: 90%;
-  margin-left: 5%;
-}
-.textim{
-  font-size: 30px;
-}
-.nama{
-  font-size: 40px;
-}
+  .container {
+    flex-direction: column;
+  }
 
-/* content 3 */
-.content3{
-  margin-left: 1.5%;
-  flex-direction: column;
-}
-.imggw{
-  width: 150px;
-  margin-left: 150px;
-  height: 150px;
-  margin-bottom: 5px;
-}
+  .btn {
+    font-size: 0.9rem;
+  }
 
-.textdes{
-  font-size: 15px;
-  margin-left: 10px;
-}
-.textabout{
-  margin-left: 15px;
-  margin-top: 5px;
-}
-.buttonseemyproject{
-  margin-left: 20px;
-}
+  /* Hero Section - Content 1 */
+  .content1 {
+    margin-top: 20%;
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* content4 */
-.content4{
-  margin-left: 1.5%;
-}
-.services{
-  font-size: 20px;
-  margin-top: 50px;
-  margin-left: 20px;
-}
-.garisskil{
-  margin-left: 90px;
-  display: none;
-}
-.skills{
-  margin-top: 100px;
-  width: 100px;
-  margin-right:50px;
-}
-.skill{
-  width: 95%;
-}
-.deskripsiskills{
-  display: none;
-}
-.vertikal{
-  display: none;
-}
+  .starimg,
+  .starimg2 {
+    display: none;
+  }
 
-/* divproject */
-.divproject{
-  margin-left: 1.5%;
-}
-.textproject{
-  font-size: auto;
-  margin-top: 50px;
-  margin-left: 20px;
-}
-.garisproject{
-  width: 15px;
-  height: 250px;
-  display: none;
-}
-/* .card{
-  height: 150px;
-  margin-right: 20px;
-  margin-bottom: 3px;
-  
-}
-.card2{
-  height: 150px;
-  margin-right: 20px;
-  margin-bottom: 3px;
-  width: 89.5%;
-} */
-.card-container{
-  flex-direction: column;
-}
-.divproject{
-  height: 480px;
-}
-.btn-10{
-  margin-right: 15px;
-}
-.full{
-  margin-top:120px ;
-  color: #a4c6f2;
-}
-.btn-10{
-  display: none;
-}
+  .texthelo {
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    left: auto;
+  }
 
-/* div contact */
-.divcontact{
-  display: flex;
-  flex-direction: column;
-  margin-left: 1.5%;
-}
-.contactme{
-  margin-top: 10%;
-  margin-left: 5%;
-}
-.ig,.wa,.github,.gmail{
-  margin-bottom: 5%;
-}
-.gariscontact{
-  display: none;
-}
+  .textrandom {
+    display: none;
+  }
 
+  .typing {
+    font-size: 1.5rem;
+  }
 
+  /* About Section - Content 2 */
+  .content2 {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 
-/* before footer */
-.beforefooter{
-  margin-left: 1.5%;
-}
-.logogw{
-  width: 45px;
-  margin-top: 45px;
-}
+  .textim {
+    font-size: 1.5rem;
+  }
 
+  .nama {
+    font-size: 2rem;
+  }
 
-/* footer */
-.footer{
-  padding-top: 40px;
-  margin-left: 1.5%;
-}
+  .job {
+    color: #fff;
+  }
 
+  /* About Content - Content 3 */
+  .content3 {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: auto;
+    padding-bottom: 20px;
+  }
 
+  .main2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3%;
+    text-align: center;
+  }
 
-.skills{
-  width:90%;
-  margin-left:5%;
-}
+  .divimg {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
 
-.card{
-  width:50%;
-  margin-left:5%;
-  height:150px;
-  
-}
-.card2{
-  height: 150px;
-  width: 50%;
-  margin-top:10px;
-}
+  .imggw {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
 
-.form{
-  width:80%;
-  margin-left:7%;
-}
+  .textabout {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    text-align: center;
+  }
 
-.textcontact{
-  font-size:6vw;
-}
+  .textdes {
+    font-size: 0.95rem;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+  }
 
-.starimgproject,
-.starimgcontact{
-  width:30%; display: none;
-}
+  .buttonseemyproject {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    justify-content: center;
+  }
 
-.textfooter{
-  margin-left:36%;
-  font-size:13px;
- 
-}
+  /* Skills Section - Content 4 */
+  .content4 {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: auto;
+    padding-bottom: 20px;
+  }
 
-.contentfooter{
-  margin-left:35%;
-}
+  .services {
+    display: none;
+  }
 
+  .garisskil {
+    display: none;
+  }
+
+  .vertikal {
+    display: none;
+  }
+
+  .skills {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .skill {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .deskripsiskills {
+    display: none;
+  }
+
+  /* Projects Section */
+  .textproject {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .divproject {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .garisproject {
+    display: none;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .card,
+  .card2 {
+    width: 85%;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+
+  .btn-10 {
+    display: none;
+  }
+
+  .full {
+    color: #a4c6f2;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Contact Section */
+  .textcontact {
+    font-size: 1.5rem;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: left;
+  }
+
+  .divcontact {
+    flex-direction: column;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+
+  .contactme {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .starimgcontact {
+    display: none;
+  }
+
+  .ig,
+  .wa,
+  .github,
+  .gmail {
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+
+  .gariscontact {
+    display: none;
+  }
+
+  .form {
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    margin-top: 20px;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 2% 3%;
+  }
+
+  .form button {
+    align-self: flex-end;
+    padding: 2% 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Footer Section */
+  .beforefooter {
+    flex-direction: column;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .logogw {
+    width: 45px;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .logokodein {
+    width: 20%;
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .textfooter {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 15px;
+  }
+
+  .footer {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: auto;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .contentfooter {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contentfooter a {
+    margin: 5px auto;
+    font-size: 0.9rem;
+  }
+
+  .starimgproject {
+    display: none;
+  }
 }
 
 

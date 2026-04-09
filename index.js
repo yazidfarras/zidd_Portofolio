@@ -5,7 +5,23 @@ document.addEventListener("mousemove",(e)=>{
   cursor.style.top = e.clientY + "px";
 });
 
+/* Hamburger Menu Toggle */
+const hamburgerMenu = document.getElementById("hamburgerMenu");
+const mobileNavMenu = document.getElementById("mobileNavMenu");
+const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("active");
+  mobileNavMenu.classList.toggle("active");
+});
+
+/* Close menu when clicking on a link */
+mobileNavLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    hamburgerMenu.classList.remove("active");
+    mobileNavMenu.classList.remove("active");
+  });
+});
 
 setInterval(() => {
     textElement.classList.add("slide-out");

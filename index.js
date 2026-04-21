@@ -34,3 +34,6 @@ setInterval(() => {
 
 }, 2000);
 
+function login() {
+  alert("terimakasih");
+}
